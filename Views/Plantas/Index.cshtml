@@ -1,0 +1,23 @@
+@model IEnumerable<plantas_peru.Models.Planta>
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">🌱 Plantas Originarias del Perú</h1>
+
+    <div class="row">
+        @foreach (var planta in Model)
+        {
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="@planta.ImagenUrl" class="card-img-top img-fluid" alt="@planta.Nombre" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@planta.Nombre</h5>
+                        <p><b>Origen:</b> @planta.Origen</p>
+                        <p><b>Especie:</b> @planta.Especie</p>
+                        <p><b>Altura Máxima:</b> @planta.AlturaMaxima m</p>
+                        <p>@planta.Notas</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
