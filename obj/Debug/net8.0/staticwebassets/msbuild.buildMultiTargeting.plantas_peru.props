@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/plantas_peru.props" />
-</Project>
